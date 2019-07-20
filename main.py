@@ -2,8 +2,7 @@
 
 import psycopg2
 
-import core
-from MainMenu import *
+from ProjectManager.core import *
 
 def main():
 	app = Application()

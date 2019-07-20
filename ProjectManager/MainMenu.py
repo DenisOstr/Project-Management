@@ -1,7 +1,6 @@
 import sys
 
-from Project import *
-from Task import *
+from ProjectManager.core import *
 
 class Application():
 	def mainMenu(self):

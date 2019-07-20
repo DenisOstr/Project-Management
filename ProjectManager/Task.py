@@ -1,4 +1,4 @@
-from DBConnection import *
+from ProjectManager.core import *
 
 class Task():
 	def showAllTask(self):

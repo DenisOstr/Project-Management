@@ -1,5 +1,6 @@
 #!C:\Users\denis\AppData\Local\Programs\Python\Python36\python
 
-from DBConnection import *
-from Task import *
-from MainMenu import *
+from ProjectManager.DBConnection import *
+from ProjectManager.Project import *
+from ProjectManager.Task import *
+from ProjectManager.MainMenu import *
