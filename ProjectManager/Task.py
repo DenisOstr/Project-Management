@@ -1,15 +1,26 @@
 from ProjectManager.core import *
 
 class Task():
-	def showAllTask(self):
-		table = 'tasks'
+	def __init__(self):
+		self.table = 'tasks'
 
+
+	def showAllTask(self):
 		showTask = DataBaseInteraction()
-		showTask.selectFrom(table)
+		showTask.selectFrom(self.table)
 
 
 	def createTask(self):
-		pass
+		pcode = input('Enter project code: ')
+		tname = input('Enter task name: ')
+		desc = input('Enter project description: ')
+		mangPerf = input('Enter id`s project performer: ')
+		estClosed = input('Enter estimated closed date: ')
+		usSoft = input('')
+		status = input('')
+
+		createTask = DataBaseInteraction()
+		createTask.insertTo(self.table)
 
 
 	def changeTask(self):

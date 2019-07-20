@@ -11,7 +11,7 @@ class Project():
 	def createProject(self):
 		pname = input('Enter project name: ')
 		desc = input('Enter project description: ')
-		mang = input('Enter id`s project manager: ')
+		mangPerf = input('Enter id`s project manager: ')
 
 		table = 'projects'
 
