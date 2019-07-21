@@ -1,11 +1,12 @@
 import sys
+import os
 
 from ProjectManager.core import *
 
 class Application():
 	def mainMenu(self):
-		print('Project Management')
-		print('=== Menu ===')
+		print('Project Management\n')
+		print('=== Menu ===\n')
 		print('1. Select Task and Start Work')
 		print('2. Create Project')
 		print('3. Create Task')
@@ -15,18 +16,21 @@ class Application():
 		print('7. Settings')
 		print('8. Exit')
 
-		userSelect = input('> ')
+		userSelect = input('\n> ')
 
 		if (userSelect == '1'):
+			os.system('cls')
 			self.startWork()
 		elif (userSelect == '2'):
+			os.system('cls')
 			cp = Project()
 			cp.createProject()
 		elif (userSelect == '3'):
-			pass
-			# ct = Task()
-			# ct.createTask()
+			os.system('cls')
+			ct = Task()
+			ct.createTask()
 		elif (userSelect == '4'):
+			os.system('cls')
 			st = Task()
 			st.showAllTask()
 		elif (userSelect == '5'):
@@ -47,4 +51,5 @@ class Application():
 
 
 	def start(self):
+		os.system('cls')
 		self.mainMenu()

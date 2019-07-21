@@ -1,11 +1,15 @@
 from ProjectManager.core import *
 
 class Project():
-	def showAllProjects(self):
-		table = 'projects'
+	def __init__(self):
+		self.table = 'projects'
 
+
+	def showAllProjects(self):
 		showProjects = DataBaseInteraction()
-		showProjects.selectFrom(table)
+		showProjects.selectFrom(self.table)
+
+		userSelect = input('\n> ')
 
 
 	def createProject(self):
@@ -13,10 +17,8 @@ class Project():
 		desc = input('Enter project description: ')
 		mangPerf = input('Enter id`s project manager: ')
 
-		table = 'projects'
-
 		createProject = DataBaseInteraction()
-		createProject.insertTo(table, pname, desc, mang)
+		createProject.projectInsert(self.table, pname, desc, mangPerf)
 
 
 	def changeProject(self):

@@ -16,11 +16,11 @@ class Task():
 		desc = input('Enter project description: ')
 		mangPerf = input('Enter id`s project performer: ')
 		estClosed = input('Enter estimated closed date: ')
-		usSoft = input('')
-		status = input('')
+		usSoft = input('Enter software what you use for this task: ')
+		statusId = input('Enter status id: ')
 
 		createTask = DataBaseInteraction()
-		createTask.insertTo(self.table)
+		createTask.taskInsert(self.table, pcode, tname, desc, mangPerf, estClosed, usSoft, statusId)
 
 
 	def changeTask(self):
